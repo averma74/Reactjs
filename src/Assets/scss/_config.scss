@@ -1,0 +1,92 @@
+/*
+vars
+*/
+$black: #010000;
+$gold: #FFD700;
+$white: #ffffff;
+$darkGrey: #333;
+$blue: #0e1e7d;
+$lightblue: #87CEFA;
+
+/* fonts -
+
+regular 400
+regular 400 italic
+bold 700
+bold 700 italic
+
+*/
+
+/*
+Mixins
+*/
+
+@mixin translateY($e) {
+  -webkit-transform: translateY($e);
+   -moz-transform: translateY($e);
+    transform: translateY($e);
+}
+
+@mixin transition($e) {
+  -webkit-transition: $e;
+   -moz-transition: $e;
+    transition: $e;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: $black;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a{
+    text-decoration: none;
+    @include transition(.4s ease-in-out);
+    cursor: pointer;
+    color: $white;
+    font-size: 19px;
+    line-height: normal;
+    &:hover{
+      color: $gold;
+      @include transition(.4s ease-in-out);
+    }
+}
+
+.container-fluid{
+  line-height: 24px;
+  float: left;
+  width: 85%;
+  background: $lightblue;
+  height: 480px;
+  padding-top: 30px;
+}
+
+.navigationSection{
+  line-height: 24px;
+  float: right;
+  width: 15%;
+}
+
+img{
+  height: 90px;
+  float:left;
+  width: 90px;
+}
+
+.headerh1{
+    margin-top: 20px;
+    margin-left: 50px;
+    float:right;
+}
+.footerClass{
+  background-color: $blue;
+  color: $white;
+  text-align: center;
+  font-size: 13px;
+}
+.date{
+  font-size: 12px;
+  color: $darkGrey;
+}

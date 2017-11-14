@@ -1,0 +1,24 @@
+@import "_config.scss";
+
+header{
+  position:relative;
+  display: block;
+  width: 100%;
+  background: $blue;
+  color: $white;
+  height: 90px;
+
+  .logo{
+    position:absolute;
+    top: 50%; left: 15px;
+    @include translateY(-50%);
+  }
+}
+
+nav{
+  position:relative;
+  display: block;
+  background: $blue;
+  color: $white;
+  height: 480px;  
+}
